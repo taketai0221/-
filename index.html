@@ -243,7 +243,7 @@ tr:last-child td{border-bottom:0}
     <div class="persona-buttons">
       <button class="persona-btn active" onclick="changePersona('passionate',this)">🔥 熱血蔵元</button>
       <button class="persona-btn" onclick="changePersona('chill',this)">🍵 散歩女子</button>
-      <button class="persona-btn" onclick="changePersona('global',this)">👴 語り部</button>
+      <button class="persona-btn" onclick="changePersona('global',this)">🌍 English</button>
     </div>
   </section>
 
@@ -267,7 +267,7 @@ tr:last-child td{border-bottom:0}
       </article>
       <article class="route" onclick="switchTab('routes')">
         <div class="route-top"><div><span class="route-badge">🎨 文化</span><h3>まち歩き・文化コース</h3></div><span>約90分</span></div>
-        <p>町並みやアートを楽しみながら、摂田屋の歴史と雰囲기를味わうコース。</p>
+        <p>町並みやアートを楽しみながら、摂田屋の歴史と雰囲気を味わうコース。</p>
         <div class="route-meta"><span>🎨 アート</span><span>🏘 町並み</span><span>📷 写真</span></div>
         <div class="route-more">宮内駅 → ポスター美術館 → 町並み → 越のむらさき → 長谷川酒造</div>
       </article>
@@ -306,7 +306,7 @@ tr:last-child td{border-bottom:0}
         </article>
         <article class="route" onclick="openCourse('gourmet')">
           <div class="route-top"><div><span class="route-badge">🍜 食べる</span><h3>食べ歩きコース</h3></div><strong>約90〜120分</strong></div>
-          <p>長岡名物を食べたい人向け。ラーメン、だんご、おむすびなどを組み合わせて楽しみます。</p>
+          <p>長岡名물을食べたい人向け。ラーメン、だんご、おむすびなどを組み合わせて楽しみます。</p>
           <div class="route-line"><div class="route-stop"><div class="circle">🚉</div><b>宮内駅</b></div><div class="route-arrow">→</div><div class="route-stop"><div class="circle">🍜</div><b>青島食堂</b></div><div class="route-arrow">→</div><div class="route-stop"><div class="circle">🍡</div><b>江口だんご</b></div><div class="route-arrow">→</div><div class="route-stop"><div class="circle">🍙</div><b>6SUBI</b></div></div>
         </article>
         <article class="route" onclick="openCourse('culture')">
@@ -386,27 +386,54 @@ tr:last-child td{border-bottom:0}
 
 <script>
 const baseSpots=[
-{id:"s1",name:"吉乃川 酒ミュージアム 醸蔵",icon:"🍶",lat:37.416800,lng:138.840500,map:"吉乃川 酒ミュージアム 醸蔵",cat:"fermentation",desc:"1548年創業の吉乃川。長い歴史を持つ酒蔵の文化を感じられるスポットです。"},
-{id:"s2",name:"機那サフラン酒製造本舗",icon:"🏮",lat:37.417500,lng:138.841000,map:"機那サフラン酒製造本舗",cat:"history",desc:"色鮮やかな鏝絵で知られる歴史的な建物。摂田屋の町並みを象徴する場所のひとつです。"},
-{id:"s3",name:"星野本店",icon:"🏺",lat:37.418000,lng:138.842000,map:"星野本店 摂田屋",cat:"fermentation",desc:"江戸時代から続く醤油蔵。昔ながらの発酵文化を感じながら町を歩けます。"},
-{id:"s4",name:"越のむらさき",icon:"🟣",lat:37.419000,lng:138.842500,map:"越のむらさき",cat:"fermentation",desc:"長く受け継がれてきた醤油文化を感じられる老舗。黒い板張りの建物も見どころです。"},
-{id:"s5",name:"長谷川酒造",icon:"🍶",lat:37.420000,lng:138.843500,map:"長谷川酒造 長岡",cat:"fermentation",desc:"手造りの酒造りを大切にする酒蔵。摂田屋周辺の発酵文化を知る上で注目したい場所です。"},
-{id:"s6",name:"発酵ミュージアム 米蔵",icon:"🌾",lat:37.416358,lng:138.840370,map:"発酵ミュージアム 米蔵 新潟県長岡市摂田屋4-6-33",cat:"history",desc:"歴史ある米蔵を活用した発酵ミュージアム。古い建物と新しい使い方の組み合わせが魅力です。"},
-{id:"s7",name:"秋山孝ポスター美術館",icon:"🎨",lat:37.420330,lng:138.841403,map:"秋山孝ポスター美術館 長岡市宮内2-10-8",cat:"art",desc:"歴史的な建物とポスターアートを楽しめる美術館。町歩きの途中に立ち寄りたい文化スポットです。"}
+{id:"s1",name:"吉乃川 酒ミュージアム 醸蔵",icon:"🍶",lat:37.416800,lng:138.840500,map:"吉乃川 酒ミュージアム 醸蔵",cat:"fermentation",
+ jp:"1548年創業の吉乃川。長い歴史を持つ酒蔵の文化を感じられるスポットです。",
+ en:"Yoshinogawa Sake Brewery, founded in 1548. Experience the deep history and culture of Niigata's oldest sake brewery."},
+{id:"s2",name:"機那サフラン酒製造本舗",icon:"🏮",lat:37.417500,lng:138.841000,map:"機那サフラン酒製造本舗",cat:"history",
+ jp:"色鮮やかな鏝絵で知られる歴史的な建物。摂田屋の町並みを象徴する場所のひとつです。",
+ en:"A historic estate known for its colorful plaster reliefs (kote-e). A symbol of Settaya's unique townscape."},
+{id:"s3",name:"星野本店",icon:"🏺",lat:37.418000,lng:138.842000,map:"星野本店 摂田屋",cat:"fermentation",
+ jp:"江戸時代から続く醤油蔵。昔ながらの発酵文化を感じながら町を歩けます。",
+ en:"A prestigious soy sauce brewery dating back to the Edo period. Feel the traditional fermentation culture while walking through town."},
+{id:"s4",name:"越のむらさき",icon:"🟣",lat:37.419000,lng:138.842500,map:"越のむらさき",cat:"fermentation",
+ jp:"長く受け継がれてきた醤油文化を感じられる老舗。黒い板張りの建物も見どころです。",
+ en:"A long-established soy sauce maker showcasing traditional wooden architecture with striking black boards."},
+{id:"s5",name:"長谷川酒造",icon:"🍶",lat:37.420000,lng:138.843500,map:"長谷川酒造 長岡",cat:"fermentation",
+ jp:"手造りの酒造りを大切にする酒蔵。摂田屋周辺の発酵文化を知る上で注目したい場所です。",
+ en:"A craft sake brewery valuing traditional handmade techniques, deeply rooted in Settaya's brewing culture."},
+{id:"s6",name:"発酵ミュージアム 米蔵",icon:"🌾",lat:37.416358,lng:138.840370,map:"発酵ミュージアム 米蔵 新潟県長岡市摂田屋4-6-33",cat:"history",
+ jp:"歴史ある米蔵を活用した発酵ミュージアム。古い建物と新しい使い方の組み合わせが魅力です。",
+ en:"A modern fermentation museum transformed from a historic rice storehouse, blending history with new innovation."},
+{id:"s7",name:"秋山孝ポスター美術館",icon:"🎨",lat:37.420330,lng:138.841403,map:"秋山孝ポスター美術館 長岡市宮内2-10-8",cat:"art",
+ jp:"歴史的な建物とポスターアートを楽しめる美術館。町歩きの途中に立ち寄りたい文化スポットです。",
+ en:"An art museum featuring poster designs inside a historic building. A great cultural stop along your walk."}
 ];
+
 const baseGourmets=[
-{id:"g1",name:"青島食堂 宮内駅前店",icon:"🍜",lat:37.421985,lng:138.840673,map:"青島食堂 宮内駅前店 長岡市宮内3-5-3",desc:"長岡を代表する生姜醤油ラーメン。宮内駅周辺でご当地グルメを楽しみたいときの候補です。"},
-{id:"g2",name:"江口だんご 摂田屋店",icon:"🍡",lat:37.417118,lng:138.842054,map:"江口だんご 摂田屋店 長岡市摂田屋4-8-28",desc:"古い建物を活用した和の雰囲気を楽しめるお店。摂田屋散策の休憩にも向いています。"},
-{id:"g3",name:"喜味屋食堂",icon:"🍛",lat:37.416500,lng:138.838400,map:"喜味屋食堂 長岡市摂田屋5-10-21",desc:"地元で親しまれている食堂。長岡のご当地グルメを味わいたい人に注目の一軒です。"},
-{id:"g4",name:"おむすびと汁と茶 6SUBI",icon:"🍙",lat:37.416358,lng:138.840370,map:"おむすびと汁と茶 6SUBI 新潟県長岡市摂田屋4-6-33",desc:"米蔵の空間で、おむすびや汁物などを楽しめるカフェ。発酵文化と食を一緒に楽しめます。"},
-{id:"g5",name:"LIS 摂田屋",icon:"🥂",lat:37.417000,lng:138.841500,map:"LIS 摂田屋",desc:"新潟の食や飲み物を楽しめるセレクトショップ・カフェ。散策途中の立ち寄りにも。"},
-{id:"g6",name:"ミヤウチショウガカレー研究所",icon:"🍛",lat:37.422700,lng:138.841450,map:"ミヤウチショウガカレー研究所 長岡市宮内3-1-16",desc:"宮内駅周辺で楽しめる生姜を使ったカレーのお店。ラーメンとは違った長岡の味を楽しめます。"}
+{id:"g1",name:"青島食堂 宮内駅前店",icon:"🍜",lat:37.421985,lng:138.840673,map:"青島食堂 宮内駅前店 長岡市宮内3-5-3",
+ jp:"長岡を代表する生姜醤油ラーメン。宮内駅周辺でご当地グルメを楽しみたいときの候補です。",
+ en:"The pioneer of Nagaoka Ginger Soy Sauce Ramen. A must-try local soul food right near Miyauchi Station."},
+{id:"g2",name:"江口だんご 摂田屋店",icon:"🍡",lat:37.417118,lng:138.842054,map:"江口だんご 摂田屋店 長岡市摂田屋4-8-28",
+ jp:"古い建物を活用した和の雰囲気を楽しめるお店。摂田屋散策の休憩にも向いています。",
+ en:"A Japanese sweets cafe in a beautifully renovated historic building, perfect for a relaxing break."},
+{id:"g3",name:"喜味屋食堂",icon:"🍛",lat:37.416500,lng:138.838400,map:"喜味屋食堂 長岡市摂田屋5-10-21",
+ jp:"地元で親しまれている食堂。長岡のご当地グルメを味わいたい人に注目の一軒です。",
+ en:"A beloved local diner famous for hearty local comfort foods and large portions."},
+{id:"g4",name:"おむすびと汁と茶 6SUBI",icon:"🍙",lat:37.416358,lng:138.840370,map:"おむすびと汁と茶 6SUBI 新潟県長岡市摂田屋4-6-33",
+ jp:"米蔵の空間で、おむすびや汁物などを楽しめるカフェ。発酵文化と食を一緒に楽しめます。",
+ en:"A cozy cafe inside the Komegura rice storehouse, serving delicious rice balls and miso soup with local seasonings."},
+{id:"g5",name:"LIS 摂田屋",icon:"🥂",lat:37.417000,lng:138.841500,map:"LIS 摂田屋",
+ jp:"新潟の食や飲み物を楽しめるセレクトショップ・カフェ。散策途中の立ち寄りにも。",
+ en:"A stylish select shop and cafe offering local Niigata delicacies, drinks, and craft products."},
+{id:"g6",name:"ミヤウチショウガカレー研究所",icon:"🍛",lat:37.422700,lng:138.841450,map:"ミヤウチショウガカレー研究所 長岡市宮内3-1-16",
+ jp:"宮内駅周辺で楽しめる生姜を使ったカレーのお店。ラーメンとは違った長岡の味を楽しめます。",
+ en:"A specialty curry restaurant using Nagaoka's famous ginger, offering a spicy and unique flavor."}
 ];
 
 const persona={
   passionate:{lang:"ja-JP",pitch:.8,rate:1.08,prefix:"よく来たな！"},
   chill:{lang:"ja-JP",pitch:1.15,rate:.9,prefix:"ゆっくり楽しんでいきましょう〜。"},
-  global:{lang:"ja-JP",pitch:0.5,rate:0.8,prefix:"ほっほっほ、ようお参りじゃ。"}
+  global:{lang:"en-US",pitch:1.0,rate:1.0,prefix:"Welcome! "}
 };
 
 const courseData={
@@ -419,23 +446,27 @@ let currentPersona="passionate", currentItem=null, currentCourse=null, speaking=
 
 function getItems(){
   const p=persona[currentPersona];
+  const isEn = (currentPersona === 'global');
   return {
-    spots:baseSpots.map(x=>({...x,desc:p.prefix+x.desc})),
-    gourmets:baseGourmets.map(x=>({...x,desc:p.prefix+x.desc}))
+    spots:baseSpots.map(x=>({...x, desc: p.prefix + (isEn ? x.en : x.jp)})),
+    gourmets:baseGourmets.map(x=>({...x, desc: p.prefix + (isEn ? x.en : x.jp)}))
   };
 }
+
 function card(item,num){
   return `<article class="card" data-cat="${item.cat||"gourmet"}" onclick="openSheet('${item.id}')">
     <div class="card-top"><span class="card-icon">${item.icon}</span><span class="card-number">${num}</span></div>
     <div class="card-body"><h3>${item.name}</h3><p>${item.desc}</p><span class="tag">${item.cat==="fermentation"?"発酵":item.cat==="history"?"歴史":item.cat==="art"?"アート":"グルメ"}</span></div>
   </article>`;
 }
+
 function render(){
   const d=getItems();
   document.getElementById("spotList").innerHTML=d.spots.map((x,i)=>card(x,String(i+1).padStart(2,"0"))).join("");
   document.getElementById("gourmetList").innerHTML=d.gourmets.map((x,i)=>card(x,String(i+1).padStart(2,"0"))).join("");
   if(map) renderMarkers();
 }
+
 function changePersona(id,el){
   currentPersona=id;
   document.querySelectorAll(".persona-btn").forEach(x=>x.classList.remove("active"));
@@ -450,6 +481,7 @@ function changePersona(id,el){
   render();
   closeSheet();
 }
+
 function openCourse(id){
   const c=courseData[id]; if(!c)return;
   currentCourse=id;
@@ -465,10 +497,12 @@ function openCourse(id){
   document.getElementById("courseOverlay").classList.add("active");
   document.getElementById("courseSheet").classList.add("active");
 }
+
 function closeCourse(){
   document.getElementById("courseOverlay").classList.remove("active");
   document.getElementById("courseSheet").classList.remove("active");
 }
+
 function showCourseOnMap(){
   closeCourse();
   switchTab("map");
@@ -507,6 +541,7 @@ function switchTab(tab,clicked,navEl){
     });
   }
 }
+
 function filterCards(cat,el,id){
   el.parentElement.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
   el.classList.add("active");
@@ -514,6 +549,7 @@ function filterCards(cat,el,id){
     c.style.display=(cat==="all"||c.dataset.cat===cat)?"block":"none";
   });
 }
+
 function openSheet(id){
   const all=[...getItems().spots,...getItems().gourmets];
   currentItem=all.find(x=>x.id===id); if(!currentItem)return;
@@ -525,11 +561,13 @@ function openSheet(id){
   document.getElementById("overlay").classList.add("active");
   document.getElementById("sheet").classList.add("active");
 }
+
 function closeSheet(){
   document.getElementById("overlay").classList.remove("active");
   document.getElementById("sheet").classList.remove("active");
   stopVoice();
 }
+
 function playVoice(){
   if(!("speechSynthesis" in window)){alert("このブラウザでは音声ガイドを利用できません。");return}
   if(speaking){stopVoice();return}
@@ -537,10 +575,11 @@ function playVoice(){
   const u=new SpeechSynthesisUtterance(currentItem.desc),p=persona[currentPersona];
   u.lang=p.lang;u.pitch=p.pitch;u.rate=p.rate;u.onend=resetVoice;
   speechSynthesis.speak(u);speaking=true;
-  document.getElementById("voiceText").textContent="停止";
+  document.getElementById("voiceText").textContent=(currentPersona==="global"?"Stop":"停止");
 }
+
 function stopVoice(){if("speechSynthesis"in window)speechSynthesis.cancel();resetVoice()}
-function resetVoice(){speaking=false;document.getElementById("voiceText").textContent="音声ガイド"}
+function resetVoice(){speaking=false;document.getElementById("voiceText").textContent=(currentPersona==="global"?"Play Audio":"音声ガイド")}
 
 function initMap(){
   if(map){setTimeout(()=>map.invalidateSize(),100);return}
@@ -548,6 +587,7 @@ function initMap(){
   L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",{maxZoom:18,attribution:"&copy; <a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>国土地理院</a>"}).addTo(map);
   renderMarkers();
 }
+
 function renderMarkers(){
   markers.forEach(m=>map.removeLayer(m));markers=[];
   const all=[...getItems().spots,...getItems().gourmets];
@@ -557,6 +597,7 @@ function renderMarkers(){
     markers.push(m);
   });
 }
+
 window.addEventListener("load",render);
 </script>
 </body>
